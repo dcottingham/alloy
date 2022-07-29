@@ -10,20 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import isLegacyCookieName from "../../../../src/utils/isLegacyCookieName";
-
-describe("isLegacyCookieName", () => {
-  it("returns true if it's at_qa_mode cookie", () => {
-    const result = isLegacyCookieName("at_qa_mode");
-    expect(result).toBeTrue();
-  });
-
-  it("returns true if it's mbox cookie", () => {
-    expect(isLegacyCookieName("mbox")).toBeTrue();
-  });
-
-  it("returns false if it's not a legacy cookie name", () => {
-    const result = isLegacyCookieName("ABC@CustomOrg");
-    expect(result).toBeFalse();
-  });
-});
+export const MBOX_EDGE_CLUSTER = "mboxEdgeCluster";
+export const MBOX = "mbox";
+export const AT_QA_MODE = "at_qa_mode";
